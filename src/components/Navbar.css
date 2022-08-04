@@ -1,0 +1,45 @@
+nav {
+  display: flex;
+  max-height: var(--nfheight);
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  /* position: absolute; */
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 45px 15px 45px;
+  /* background-color: rgb(247, 6, 166); */
+}
+
+.nav-left {
+  /* background-color: orange; */
+}
+
+.nav-right {
+  display: flex;
+  /* background-color: cyan; */
+}
+
+.nav-left > .nav-brand {
+  margin: 0 30px;
+  font-size: large;
+  font-weight: 600;
+}
+
+.nav-right > .nav-link {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  margin: 0 30px;
+  font-size: 20px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}

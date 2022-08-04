@@ -1,0 +1,40 @@
+main {
+  display: flex;
+  height: calc(var(--maxh) - 2 * var(--nfheight));
+}
+
+.wrapper {
+  width: 100%;
+
+  /* flex-grow: 1; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 45px;
+  background-color: rgb(207, 207, 207);
+}
+
+.left-section {
+  width: 50%;
+  margin: 1.5rem;
+  background-color: blueviolet;
+}
+
+.left-section > span {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.right-section {
+  width: var(--containerw);
+  margin: 1.5rem;
+  background-color: yellowgreen;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: var(--terminalh);
+  width: 100%;
+  background-color: aqua;
+}
