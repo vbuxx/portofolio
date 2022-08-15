@@ -15,7 +15,7 @@ export default function About() {
       <Container>
         <div className="py-8 overflow-y-visible h-auto">
           <div className="flex flex-col w-full">
-            <div className="relative w-40 h-40 mx-auto md:mr-auto">
+            <div className="relative w-40 h-40 mx-auto md:ml-0 md:mr-auto">
               <Image
                 src="/avatar-samping.webp"
                 layout="fill"
