@@ -35,7 +35,7 @@ const AboutTabs = () => {
   return (
     <div className="pt-6">
       <div className="sticky top-0 bg-white max-h-16 z-50">
-        <div className="flex space-x-2 border-b font-medium border-gray-400 text-gray-500">
+        <div className="flex space-x-2 md:space-x-6 border-b font-medium border-gray-400 text-gray-500">
           {tabList}
         </div>
       </div>

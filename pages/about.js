@@ -17,10 +17,10 @@ export default function About() {
           <div className="flex flex-col w-full">
             <div className="relative w-40 h-40 mx-auto md:ml-0 md:mr-auto">
               <Image
-                src="/avatar-samping.webp"
+                src="/andhikapramanaputra.webp"
                 layout="fill"
                 className="drop-shadow-lg"
-                alt="avatar"
+                alt="Andhika Pramana Putra - Profile"
               />
             </div>
             <div className="flex flex-col mt-4">

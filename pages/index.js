@@ -33,8 +33,8 @@ export default function Home() {
           </div>
           <div className="flex w-1/2 my-auto">
             <img
-              src="/avatar-depan.webp"
-              alt="andhika pramana"
+              src="/andhikapramana.webp"
+              alt="Andhika Pramana - Profile"
               className="rounded-xl drop-shadow-xl mb-4 md:mb-0 ml-auto w-[300px] h-[300px] "
             />
           </div>
