@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Container from "../Container";
 
 function Layout({ children, ...customMeta }) {
   const router = useRouter();
@@ -37,10 +38,15 @@ function Layout({ children, ...customMeta }) {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
       </Head>
-      <div className="min-h-screen bg-white text-slate-700">
-        <Navbar />
-        {children}
-        {/* <Footer /> */}
+      <div className="text-slate-800">
+        <Container>
+          <div className="flex flex-col h-screen">
+            <div className=""></div>
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </Container>
       </div>
     </>
   );

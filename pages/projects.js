@@ -1,116 +1,84 @@
 import Head from "next/head";
-import Image from "next/image";
-import Container from "../components/Container";
 import Layout from "../components/layouts/Layout";
-import styles from "../styles/Home.module.css";
 
-export default function Projects() {
+export default function Projects({ repos }) {
+  const finds = repos.filter((repo) => repo.homepage);
+  const projectViews = finds.map((find, i) => {
+    let event = new Date(find.pushed_at);
+    event = event.toDateString().split(" ");
+    event = event[2] + " " + event[1] + " " + event[3];
+    return (
+      <div className="w-full md:w-1/2 xl:w-1/3 p-3" key={i}>
+        <a className="group" href={find.homepage}>
+          <div className="group flex flex-col justify-end h-full relative overflow-hidden rounded-10">
+            <img
+              className="mx-auto w-full transform group-hover:scale-110 transition ease-out duration-500"
+              src="https://picsum.photos/seed/picsum/200/300"
+              alt=""
+            />
+            <div className="absolute bottom-0 left-0 w-full p-2.5">
+              <div className="p-5 w-full bg-black bg-opacity-80 rounded-md">
+                <div className="font-heading font-semibold text-lg text-white group-hover:opacity-80 uppercase">
+                  {find.name}
+                </div>
+                <div className="mb-2 font-heading font-medium text-xs text-gray-400 tracking-px">
+                  From GitHub - Last update at {event}
+                </div>
+                <div className="text-gray-400 text-xs">
+                  {find.description
+                    ? find.description
+                    : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, qui."}
+                </div>
+
+                <div className="pt-4 pb-2">
+                  {find.topics.map((topic) => {
+                    return (
+                      <span
+                        key={topic}
+                        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2"
+                      >
+                        {topic}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    );
+  });
+  console.log(finds);
   return (
     <Layout title="Projects - Andhika Pramana Putra">
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
-        <section className="pt-20 pb-36 overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className="md:max-w-lg mx-auto text-center mb-20">
-              <h2 className="mb-4 font-heading font-semibold text-black text-6xl sm:text-7xl">
-                Latest projects
-              </h2>
-              <p className="text-lg text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-              </p>
-            </div>
-            <div className="flex flex-wrap -m-3">
-              <div className="w-full md:w-1/2 xl:w-1/4 p-3">
-                <a className="group" href="#">
-                  <div className="group flex flex-col justify-end h-full relative overflow-hidden rounded-10">
-                    <img
-                      className="mx-auto w-full transform group-hover:scale-110 transition ease-out duration-500"
-                      src="gradia-assets/images/blog/blog1.png"
-                      alt=""
-                    />
-                    <div className="absolute bottom-0 left-0 w-full p-2.5">
-                      <div className="p-5 w-full bg-black bg-opacity-80 rounded-md">
-                        <h2 className="mb-2 font-heading font-medium text-xs uppercase text-gray-400 tracking-px">
-                          Technology . 4 min read
-                        </h2>
-                        <p className="font-heading font-semibold text-lg text-white group-hover:underline">
-                          You will never believe these bizarre truth of travel.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="w-full md:w-1/2 xl:w-1/4 p-3">
-                <a className="group" href="#">
-                  <div className="group flex flex-col justify-end h-full relative overflow-hidden rounded-10">
-                    <img
-                      className="mx-auto w-full transform group-hover:scale-110 transition ease-out duration-500"
-                      src="gradia-assets/images/blog/blog2.png"
-                      alt=""
-                    />
-                    <div className="absolute bottom-0 left-0 w-full p-2.5">
-                      <div className="p-5 w-full bg-black bg-opacity-80 rounded-md">
-                        <h2 className="mb-2 font-heading font-medium text-xs uppercase text-gray-400 tracking-px">
-                          Technology . 4 min read
-                        </h2>
-                        <p className="font-heading font-semibold text-lg text-white group-hover:underline">
-                          You will never believe these bizarre truth of travel.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="w-full md:w-1/2 xl:w-1/4 p-3">
-                <a className="group" href="#">
-                  <div className="group flex flex-col justify-end h-full relative overflow-hidden rounded-10">
-                    <img
-                      className="mx-auto w-full transform group-hover:scale-110 transition ease-out duration-500"
-                      src="gradia-assets/images/blog/blog3.png"
-                      alt=""
-                    />
-                    <div className="absolute bottom-0 left-0 w-full p-2.5">
-                      <div className="p-5 w-full bg-black bg-opacity-80 rounded-md">
-                        <h2 className="mb-2 font-heading font-medium text-xs uppercase text-gray-400 tracking-px">
-                          Technology . 4 min read
-                        </h2>
-                        <p className="font-heading font-semibold text-lg text-white group-hover:underline">
-                          You will never believe these bizarre truth of travel.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="w-full md:w-1/2 xl:w-1/4 p-3">
-                <a className="group" href="#">
-                  <div className="group flex flex-col justify-end h-full relative overflow-hidden rounded-10">
-                    <img
-                      className="mx-auto w-full transform group-hover:scale-110 transition ease-out duration-500"
-                      src="/sample.jpeg"
-                      alt="s"
-                    />
-                    <div className="absolute bottom-0 left-0 w-full p-2.5">
-                      <div className="p-5 w-full bg-black bg-opacity-80 rounded-md">
-                        <h2 className="mb-2 font-heading font-medium text-xs uppercase text-gray-400 tracking-px">
-                          Technology . 4 min read
-                        </h2>
-                        <p className="font-heading font-semibold text-lg text-white group-hover:underline">
-                          You will never believe these bizarre truth of travel.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Container>
+
+      <section className="flex flex-col py-8 overflow-y-visible h-auto">
+        <div className="md:max-w-lg mx-auto text-center mb-20">
+          <h2 className="mb-4 font-heading font-semibold text-black text-6xl sm:text-7xl">
+            Latest projects
+          </h2>
+          <p className="text-lg text-gray-600">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim.
+          </p>
+        </div>
+        <div className="flex flex-wrap -m-3">{projectViews}</div>
+      </section>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch("https://api.github.com/users/vbuxx/repos");
+  const repos = await res.json();
+
+  return {
+    props: {
+      repos,
+    },
+  };
 }

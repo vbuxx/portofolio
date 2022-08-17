@@ -1,8 +1,5 @@
 import Layout from "../components/layouts/Layout";
 import Head from "next/head";
-import Link from "next/link";
-import styles from "../styles/Home.module.css";
-import Container from "../components/Container";
 
 export default function Home() {
   return (
@@ -10,8 +7,8 @@ export default function Home() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
-        <div className="flex py-20 h-auto">
+      <div className="flex h-full">
+        <div className="flex my-auto ">
           <div className="w-1/2 my-auto leading-10">
             <p className="font-medium text-2xl">Hola👋 I&apos;m Andhika</p>
             <div className="font-bold text-6xl drop-shadow-xl">
@@ -37,7 +34,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </Container>
+      </div>
     </Layout>
   );
 }
