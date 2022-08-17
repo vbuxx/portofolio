@@ -10,13 +10,13 @@ function Footer() {
       >
         <h3 className="">© 2022 Andhika Pramana</h3>
         <div className="flex items-center space-x-6">
-          <a href="/">
+          <a href="https://github.com/vbuxx">
             <img src="/github.svg" alt="" className="w-8 hover:opacity-75" />
           </a>
-          <a href="/">
+          <a href="https://www.instagram.com/flavoocx/">
             <img src="/instagram.svg" alt="" className="w-8 hover:opacity-75" />
           </a>
-          <a href="/">
+          <a href="https://www.linkedin.com/in/andhikapramana/">
             <img src="/linkedin.svg" alt="" className="w-8 hover:opacity-75" />
           </a>
         </div>

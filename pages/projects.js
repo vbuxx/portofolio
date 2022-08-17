@@ -49,7 +49,6 @@ export default function Projects({ repos }) {
       </div>
     );
   });
-  console.log(finds);
   return (
     <Layout title="Projects - Andhika Pramana Putra">
       <Head>
