@@ -15,8 +15,8 @@ export default function Contact() {
             Contact Me
           </h2>
           <p className="text-lg text-gray-600">
-            Have any questions? Send me a message and i'll respond as soon as
-            possible
+            Have any questions? Send me a message and i&apos;ll respond as soon
+            as possible
           </p>
         </div>
         <form className="rounded-lg shadow-2xl flex flex-col px-8 py-8 bg-white mb-8">
