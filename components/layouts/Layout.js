@@ -5,7 +5,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Container from "../Container";
 
-function Layout({ children, ...customMeta }) {
+function Layout({ children, heightScreen = "h-auto", ...customMeta }) {
   const router = useRouter();
   const meta = {
     title: "Andhika Pramana Putra - Web Developer",
@@ -40,8 +40,7 @@ function Layout({ children, ...customMeta }) {
       </Head>
       <div className="text-slate-800">
         <Container>
-          <div className="flex flex-col h-screen">
-            <div className=""></div>
+          <div className={`flex flex-col ` + heightScreen}>
             <Navbar />
             {children}
             <Footer />

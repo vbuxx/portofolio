@@ -10,8 +10,8 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex-none w-full h-full py-8 mx-2">
-        <div className="flex-none justify-start">
+      <div className="flex flex-col justify-start w-full h-full py-8 mx-2 mb-auto">
+        <div className="flex-none ">
           <div className="relative w-40 h-40 mx-auto md:ml-0 md:mr-auto">
             <Image
               src="/andhikapramanaputra.webp"
