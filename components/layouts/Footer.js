@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className="my-auto -mb-0.5">
       <footer
-        className="flex mt-auto items-center justify-between font-medium py-8
+        className="flex items-center justify-between font-medium pb-4 md:py-8 
         "
       >
         <h3 className="">© 2022 Andhika Pramana</h3>

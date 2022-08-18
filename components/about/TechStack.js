@@ -27,12 +27,12 @@ const TechStack = () => {
     </div>
   ));
   return (
-    <div>
+    <>
       <h3 className="my-6 pt-4 font-bold border-t border-gray-300">
         Tech Stack
       </h3>
       <div className="grid grid-cols-2 gap-6">{skillsList}</div>
-    </div>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Container from "../Container";
 
-function Layout({ children, heightScreen = "h-auto", ...customMeta }) {
+function Layout({ children, heightScreen = "min-h-screen", ...customMeta }) {
   const router = useRouter();
   const meta = {
     title: "Andhika Pramana Putra - Web Developer",
