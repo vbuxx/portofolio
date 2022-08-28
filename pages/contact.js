@@ -11,53 +11,65 @@ export default function Contact() {
       </Head>
       <div>
         <div className="md:max-w-lg mx-auto text-center mb-20 pt-8">
-          <h2 className="mb-4 font-heading font-semibold text-black text-6xl sm:text-7xl">
+          <h2 className="mb-4 font-heading font-semibold text-black dark:text-inherit text-6xl sm:text-7xl">
             Contact Me
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-inherit">
             Have any questions? Send me a message and i&apos;ll respond as soon
             as possible
           </p>
         </div>
-        <form className="rounded-lg shadow-2xl flex flex-col px-8 py-8 bg-white mb-8">
+        <form className="rounded-lg shadow-2xl flex flex-col px-8 py-8 bg-white dark:bg-inherit mb-8">
           <h1 className="text-2xl font-bold ">Send a message</h1>
 
-          <label htmlFor="fullname" className="text-gray-500 font-light mt-8 ">
+          <label
+            htmlFor="fullname"
+            className="text-gray-500 dark:text-inherit font-light mt-8 "
+          >
             Full name<span className="text-red-500 ">*</span>
           </label>
           <input
             type="text"
             name="fullname"
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 focus:border-b-0 ring-cyan-400 font-light text-gray-500 dark:text-inherit"
           />
 
-          <label htmlFor="email" className="text-gray-500 font-light mt-4 ">
+          <label
+            htmlFor="email"
+            className="text-gray-500 dark:text-inherit font-light mt-4 "
+          >
             E-mail<span className="text-red-500">*</span>
           </label>
           <input
             type="email"
             name="email"
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 focus:border-b-0  ring-cyan-400 font-light text-gray-500 dark:text-inherit"
           />
 
-          <label htmlFor="subject" className="text-gray-500 font-light mt-4">
+          <label
+            htmlFor="subject"
+            className="text-gray-500 dark:text-inherit font-light mt-4"
+          >
             Subject<span className="text-red-500">*</span>
           </label>
           <input
             type="text"
             name="subject"
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 focus:border-b-0  ring-cyan-400 font-light text-gray-500 dark:text-inherit"
           />
 
-          <label htmlFor="message" className="text-gray-500 font-light mt-4">
+          <label
+            htmlFor="message"
+            className="text-gray-500 dark:text-inherit font-light mt-4"
+          >
             Message<span className="text-red-500">*</span>
           </label>
           <textarea
             name="message"
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 focus:border-b-0  ring-cyan-400 font-light text-gray-500 dark:text-inherit"
           ></textarea>
           <div className="flex flex-row items-center justify-start">
-            <button className="px-10 mt-8 py-2 bg-slate-700 text-gray-50 font-light rounded-2xl text-lg flex flex-row items-center hover:opacity-70">
+            <button className="px-10 mt-8 py-2 bg-slate-700 dark:bg-blue-700 text-gray-50 font-light rounded-2xl text-lg flex flex-row items-center hover:opacity-70">
               Send
               <svg
                 width="24"

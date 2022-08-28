@@ -57,10 +57,10 @@ export default function Projects({ repos }) {
 
       <section className="flex flex-col py-8 overflow-y-visible h-auto">
         <div className="md:max-w-lg mx-auto text-center mb-20">
-          <h2 className="mb-4 font-heading font-semibold text-black text-6xl sm:text-7xl">
+          <h2 className="mb-4 font-heading font-semibold text-black dark:text-inherit text-6xl sm:text-7xl">
             Latest projects
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-inherit">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim.
           </p>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Dropdown from "../Dropdown";
+import ThemeToggle from "../ThemeToggle";
 
 function Navbar() {
   const links = [
@@ -33,17 +34,17 @@ function Navbar() {
           </Link>
         </div>
 
-        <div className="flex w-full lg:w-6/12">
+        <div className="flex w-full lg:w-6/12 lg:justify-end">
           <div className="block lg:hidden mx-auto z-10">
             <Dropdown links={links} />
           </div>
-          <div className="hidden lg:block ">
+          <div className="hidden lg:block">
             <ul className="lg:space-x-14 flex lg:justify-end lg:items-center flex-col lg:flex-row space-y-4 lg:space-y-0">
               {links.map((link, i) => {
                 return (
                   <li key={i}>
                     <Link href={link.href}>
-                      <a className="font-bold hover:drop-shadow-xl">
+                      <a className="font-semibold hover:drop-shadow-xl">
                         {link.page}
                       </a>
                     </Link>
@@ -52,6 +53,9 @@ function Navbar() {
               })}
             </ul>
           </div>
+        </div>
+        <div className="toggle ml-10">
+          <ThemeToggle />
         </div>
       </nav>
     </>

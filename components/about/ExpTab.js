@@ -7,7 +7,7 @@ const ExpTab = () => {
         <img src="/icons/investree.png" alt="icon" className="h-[50px]"></img>
 
         <div>
-          <div className="font-semibold text-black pb-1">
+          <div className="font-semibold text-black dark:text-inherit pb-1">
             Investree Virtual Internship Experience
           </div>
           <div className="border-l-2 border-gray-600 pl-2">

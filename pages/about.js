@@ -31,6 +31,7 @@ export default function About() {
                   viewBox="0 0 20 20"
                   fill="#4b5563"
                   aria-hidden="true"
+                  className="dark:fill-gray-300"
                 >
                   <path
                     fillRule="evenodd"
@@ -39,7 +40,7 @@ export default function About() {
                   ></path>
                 </svg>
               </div>
-              <p className="drop-shadow-xl font-medium text-base text-gray-600">
+              <p className="drop-shadow-xl font-medium text-base text-gray-600 dark:text-gray-300">
                 Jombang, East Java
               </p>
             </div>

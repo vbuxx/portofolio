@@ -4,7 +4,10 @@ import skills from "../../datas/skills";
 const TechStack = () => {
   const skillsList = skills.map((skill, id) => (
     <div key={id}>
-      <div id="skills-title" className="font-semibold text-gray-500 mb-4">
+      <div
+        id="skills-title"
+        className="font-semibold text-gray-500 dark:text-inherit mb-4"
+      >
         {skill.title}
       </div>
       <div id="skills-list" className="space-y-2">

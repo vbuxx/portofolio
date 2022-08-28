@@ -11,13 +11,25 @@ function Footer() {
         <h3 className="my-4">© 2022 Andhika Pramana</h3>
         <div className="flex items-center space-x-6">
           <a href="https://github.com/vbuxx">
-            <img src="/github.svg" alt="" className="w-8 hover:opacity-75" />
+            <img
+              src="/github.svg"
+              alt=""
+              className="w-8 hover:opacity-75 dark:bg-slate-300 dark:rounded-md"
+            />
           </a>
           <a href="https://www.instagram.com/flavoocx/">
-            <img src="/instagram.svg" alt="" className="w-8 hover:opacity-75" />
+            <img
+              src="/instagram.svg"
+              alt=""
+              className="w-8 hover:opacity-75 dark:bg-slate-300 dark:rounded-md"
+            />
           </a>
           <a href="https://www.linkedin.com/in/andhikapramana/">
-            <img src="/linkedin.svg" alt="" className="w-8 hover:opacity-75" />
+            <img
+              src="/linkedin.svg"
+              alt=""
+              className="w-8 hover:opacity-75 dark:bg-slate-300 dark:rounded-md"
+            />
           </a>
         </div>
       </footer>

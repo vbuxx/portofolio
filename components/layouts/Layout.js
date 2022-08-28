@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Container from "../Container";
+import { ThemeProvider } from "../ThemeContext";
 
 function Layout({ children, heightScreen = "min-h-screen", ...customMeta }) {
   const router = useRouter();
@@ -38,15 +39,17 @@ function Layout({ children, heightScreen = "min-h-screen", ...customMeta }) {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
       </Head>
-      <div className="text-slate-800">
-        <Container>
-          <div className={`flex flex-col min-h-screen ` + heightScreen}>
-            <Navbar />
-            {children}
-            <Footer />
-          </div>
-        </Container>
-      </div>
+      <ThemeProvider>
+        <div className="text-slate-800 dark:text-slate-100 dark:bg-slate-900">
+          <Container>
+            <div className={`flex flex-col min-h-screen ` + heightScreen}>
+              <Navbar />
+              {children}
+              <Footer />
+            </div>
+          </Container>
+        </div>
+      </ThemeProvider>
     </>
   );
 }

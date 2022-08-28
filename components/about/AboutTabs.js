@@ -18,9 +18,9 @@ const AboutTabs = () => {
       key={id}
       disabled={showContent.tab === data.tab}
       className={
-        `hover:text-black text-left ` +
+        `text-gray-400 hover:text-black dark:hover:text-gray-500 text-left ` +
         (showContent.tab === data.tab &&
-          "font-bold border-b-2 border-violet-700 text-violet-700 disabled:hover:text-violet-700")
+          "font-bold border-b-2 border-violet-700 text-violet-700 dark:border-cyan-400 dark:text-cyan-400 disabled:hover:text-violet-700 dark:disabled:hover:text-cyan-400")
       }
       onClick={() =>
         setShowContent({
@@ -34,12 +34,12 @@ const AboutTabs = () => {
   ));
   return (
     <div className="pt-6">
-      <div className="sticky top-0 bg-white max-h-16 z-50">
-        <div className="flex space-x-2 md:space-x-6 border-b font-medium border-gray-400 text-gray-500">
+      <div className="sticky top-0 bg-white dark:bg-inherit max-h-16 z-50">
+        <div className="flex space-x-2 md:space-x-6 border-b font-medium border-gray-400 text-gray-500 dark:text-inherit">
           {tabList}
         </div>
       </div>
-      <p className="pt-5 leading-normal font-[15px] text-black">
+      <p className="pt-5 leading-normal font-[15px] text-black dark:text-inherit">
         {showContent.content}
       </p>
       <div>

@@ -4,11 +4,13 @@ const EduTab = () => {
   return (
     <>
       <div>
-        <div className="font-semibold text-gray-500 mb-4">Formal Education</div>
+        <div className="font-semibold text-gray-500 dark:text-inherit mb-4">
+          Formal Education
+        </div>
         <div className="flex space-x-4 mb-4">
           <img src="/icons/UB.png" alt="icon" className="w-12 h-12"></img>
           <div>
-            <div className="font-semibold text-black">
+            <div className="font-semibold text-black dark:text-inherit">
               Universitas Brawijaya
             </div>
             <div className="text-sm">Bachelor of Engineering</div>
@@ -17,7 +19,7 @@ const EduTab = () => {
         </div>
       </div>
       <div>
-        <div className="font-semibold text-gray-500 mb-4">
+        <div className="font-semibold text-gray-500 dark:text-inherit mb-4">
           Informal Education
         </div>
         <div className="flex space-x-4">
@@ -27,7 +29,7 @@ const EduTab = () => {
             className="w-12 h-12"
           ></img>
           <div>
-            <div className="font-semibold text-black">
+            <div className="font-semibold text-black dark:text-inherit">
               Digital Talent Scholarship 2022 by KOMINFO
             </div>
             <div className="text-sm">ReactJS for Web Development</div>
