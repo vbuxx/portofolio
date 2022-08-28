@@ -5,13 +5,13 @@ import AboutTabs from "../components/about/AboutTabs";
 
 export default function About() {
   return (
-    <Layout title="About - Andhika Pramana Putra" heightScreen="md:h-screen">
+    <Layout title="About - Andhika Pramana Putra">
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col justify-start w-full h-full py-8 mb-auto">
-        <div className="flex-none ">
+      <div>
+        <div className="flex flex-col w-full py-8">
           <div className="relative w-40 h-40 mx-auto md:ml-0 md:mr-auto">
             <Image
               src="/andhikapramanaputra.webp"
@@ -44,8 +44,8 @@ export default function About() {
               </p>
             </div>
           </div>
-          <AboutTabs />
         </div>
+        <AboutTabs />
       </div>
     </Layout>
   );

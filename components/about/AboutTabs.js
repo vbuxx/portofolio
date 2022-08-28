@@ -42,11 +42,12 @@ const AboutTabs = () => {
       <p className="pt-5 leading-normal font-[15px] text-black">
         {showContent.content}
       </p>
-
-      {showContent.tab == "about" && <TechStack />}
-      {showContent.tab == "educations" && <EduTab />}
-      {showContent.tab == "experiences" && <ExpTab />}
-      {showContent.tab == "credentials" && <CredentTab />}
+      <div>
+        {showContent.tab == "about" && <TechStack />}
+        {showContent.tab == "educations" && <EduTab />}
+        {showContent.tab == "experiences" && <ExpTab />}
+        {showContent.tab == "credentials" && <CredentTab />}
+      </div>
     </div>
   );
 };

@@ -21,8 +21,8 @@ function Navbar() {
     },
   ];
   return (
-    <div className="my-auto -mt-1">
-      <nav className="flex flex-col lg:flex-row items-center py-8 ">
+    <>
+      <nav className="flex flex-col lg:flex-row items-center py-8">
         <div className="w-full lg:w-6/12">
           <Link href="/">
             <a className="flex items-center justify-center lg:justify-start">
@@ -54,7 +54,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 }
 

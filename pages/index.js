@@ -12,9 +12,9 @@ export default function Home() {
       </Head>
       <div className="flex h-full">
         <div className="flex flex-col pb-20 my-auto">
-          <div className="flex flex-col lg:flex-row ">
-            <div className="lg:w-1/2 lg:mt-10 lg:leading-10">
-              <p className="font-medium text-xl lg:text-2xl w-full leading-loose">
+          <div className="flex flex-col md:flex-row ">
+            <div className="md:w-1/2 lg:mt-10 lg:leading-10">
+              <p className="font-medium text-xl text-center md:text-start lg:text-2xl w-full leading-loose">
                 Hola👋 I&apos;m Andhika <br />
                 <span className="font-bold text-5xl lg:text-6xl drop-shadow-xl">
                   I&apos;m{" "}
@@ -25,15 +25,15 @@ export default function Home() {
                 </span>
               </p>
             </div>
-            <div className="flex w-1/2 my-auto">
+            <div className="flex md:w-1/2 my-auto justify-center md:justify-end">
               <img
                 src="/andhikapramana.webp"
                 alt="Andhika Pramana - Profile"
-                className="rounded-xl drop-shadow-xl m-8 lg:m-0 ml-0 lg:ml-auto w-full lg:w-3/4 "
+                className="rounded-xl drop-shadow-xl m-8 lg:m-0 lg:ml-auto w-1/2 md:w-2/3 lg:w-3/4 "
               />
             </div>
           </div>
-          <div className="w-auto lg:-mt-16">
+          <div className="flex justify-center md:justify-start w-auto md:w-full lg:-mt-16">
             <button className="bg-slate-700 text-white px-4 rounded-2xl py-2 shadow-lg transition-all delay-200 ease-in-out duration-500 hover:shadow-2xl hover:opacity-50">
               <a href="https://www.showwcase.com/andhikapramana">My Resume ↗</a>
             </button>

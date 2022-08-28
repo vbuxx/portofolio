@@ -2,7 +2,7 @@ import React from "react";
 
 const ExpTab = () => {
   return (
-    <div>
+    <>
       <div className="flex space-x-4">
         <img src="/icons/investree.png" alt="icon" className="h-[50px]"></img>
 
@@ -20,7 +20,7 @@ const ExpTab = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

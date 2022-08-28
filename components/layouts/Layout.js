@@ -40,7 +40,7 @@ function Layout({ children, heightScreen = "min-h-screen", ...customMeta }) {
       </Head>
       <div className="text-slate-800">
         <Container>
-          <div className={`flex flex-col ` + heightScreen}>
+          <div className={`flex flex-col min-h-screen ` + heightScreen}>
             <Navbar />
             {children}
             <Footer />
