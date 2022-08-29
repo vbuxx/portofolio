@@ -1,5 +1,4 @@
 import React from "react";
-import { FaSun, FaMoon } from "react-icons/fa";
 import { ThemeContext } from "./ThemeContext";
 
 const ThemeToggle = () => {
@@ -38,7 +37,7 @@ const ThemeToggle = () => {
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
           >
-            <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 mr-2">
+            <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
