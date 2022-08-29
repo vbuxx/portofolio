@@ -19,7 +19,7 @@ const ThemeToggle = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="w-6 h-6 mr-2"
+              className="w-6 h-6"
             >
               <path
                 d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"

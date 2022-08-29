@@ -54,7 +54,7 @@ function Navbar() {
             </ul>
           </div>
         </div>
-        <div className="toggle ml-10">
+        <div className="flex justify-center w-full md:w-20 md:justify-end">
           <ThemeToggle />
         </div>
       </nav>

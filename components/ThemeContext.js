@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const getInitialTheme = () => {
   if (typeof window !== "undefined" && window.localStorage) {
@@ -19,7 +19,8 @@ const getInitialTheme = () => {
 export const ThemeContext = React.createContext();
 
 export const ThemeProvider = ({ initialTheme, children }) => {
-  const [theme, setTheme] = React.useState(getInitialTheme);
+  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState(getInitialTheme);
 
   const rawSetTheme = (rawTheme) => {
     const root = window.document.documentElement;
@@ -39,6 +40,10 @@ export const ThemeProvider = ({ initialTheme, children }) => {
     rawSetTheme(theme);
   }, [theme]);
 
+  // When mounted on client, now we can show the UI
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}

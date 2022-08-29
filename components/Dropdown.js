@@ -9,7 +9,7 @@ const Dropdown = ({ links }) => {
     <div className="p-10">
       <div className="group inline-block relative">
         <div className="bg-gradient-to-r from-indigo-700 p-1 rounded-xl to-pink-400">
-          <button className="font-semibold bg-white py-2 px-4 rounded-lg drop shadow-xl inline-flex items-center">
+          <button className="font-semibold bg-white dark:bg-slate-800 py-2 px-4 rounded-lg drop shadow-xl inline-flex items-center">
             <span className="mr-1">{onPage[0].page}</span>
             <svg
               className="fill-current h-4 w-4"
@@ -25,7 +25,7 @@ const Dropdown = ({ links }) => {
             return (
               <li key={i}>
                 <Link href={link.href}>
-                  <button className="rounded-t bg-white hover:bg-gray-400 py-2 text-center w-32 block whitespace-no-wrap drop-shadow-lg">
+                  <button className="rounded-t bg-white dark:bg-slate-800 hover:bg-gray-400 dark:hover:bg-slate-600 dark:text-white py-2 text-center w-32 block whitespace-no-wrap drop-shadow-lg">
                     {link.page}
                   </button>
                 </Link>

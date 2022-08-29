@@ -15,7 +15,7 @@ class MyDocument extends Document {
             content="gO2UedgoT25s2fLlaofsgPAE3r6jq_nHb83d16nwvLY"
           />
         </Head>
-        <body>
+        <body className="text-slate-800 dark:text-slate-100 dark:bg-slate-900">
           <Main />
           <NextScript />
         </body>

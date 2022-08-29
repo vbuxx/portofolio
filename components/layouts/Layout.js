@@ -4,9 +4,8 @@ import Navbar from "./Navbar";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Container from "../Container";
-import { ThemeProvider } from "../ThemeContext";
 
-function Layout({ children, heightScreen = "min-h-screen", ...customMeta }) {
+function Layout({ children, heightScreen = "", ...customMeta }) {
   const router = useRouter();
   const meta = {
     title: "Andhika Pramana Putra - Web Developer",
@@ -39,17 +38,13 @@ function Layout({ children, heightScreen = "min-h-screen", ...customMeta }) {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
       </Head>
-      <ThemeProvider>
-        <div className="text-slate-800 dark:text-slate-100 dark:bg-slate-900">
-          <Container>
-            <div className={`flex flex-col min-h-screen ` + heightScreen}>
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
-          </Container>
+      <Container>
+        <div className={`flex flex-col min-h-screen ` + heightScreen}>
+          <Navbar />
+          {children}
+          <Footer />
         </div>
-      </ThemeProvider>
+      </Container>
     </>
   );
 }
