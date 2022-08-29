@@ -9,7 +9,7 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
   const router = useRouter();
   const meta = {
     title: "Andhika Pramana Putra - Web Developer",
-    description: `A 24-year-old web developer based in Jombang, Indonesia.`,
+    description: `Jombang, Indonesia | Software Engineer | Web Development | Front-End | Back-End | github.com/vbuxx | LinkedIn/andhikapramana | Bachelor of Enginnering | Electrical Engineering | Universitas Brawijaya`,
     image: "/andhikapramana.png",
     type: "website",
     ...customMeta,
