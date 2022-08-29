@@ -10,7 +10,7 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
   const meta = {
     title: "Andhika Pramana Putra - Web Developer",
     description: `Jombang, Indonesia | Software Engineer | Web Development | Front-End | Back-End | github.com/vbuxx | LinkedIn/andhikapramana | Bachelor of Enginnering | Electrical Engineering | Universitas Brawijaya`,
-    image: "/andhikapramana.png",
+    image: "/andhikapramanaputra.png",
     type: "website",
     ...customMeta,
   };
