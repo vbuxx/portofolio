@@ -39,7 +39,7 @@ export default function Contact() {
     }
 
     setErrors({ ...tempErrors });
-    console.log("errors", errors);
+    // console.log("errors", errors);
     return isValid;
   };
 
@@ -62,18 +62,22 @@ export default function Contact() {
         method: "POST",
       };
       const res = await fetch("/api/sendMail", body)
-        .then(console.log("Email diterima"))
+        // .then(console.log("Email diterima"))
         .then(
           async () =>
             await fetch("/api/replySender", body)
-              .then(console.log("Email dibalas"))
+              // .then(console.log("Email dibalas"))
               .catch((e) => console.log("error: ", e))
         )
         .catch((e) => console.log("error: ", e));
 
       setButtonText("Send");
+      setFullname("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+      // console.log(fullname, email, subject, message);
     }
-    console.log(fullname, email, subject, message);
   };
 
   return (
