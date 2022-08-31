@@ -1,9 +1,81 @@
+import React, { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import Layout from "../components/layouts/Layout";
-import styles from "../styles/Home.module.css";
+
+// const sgMail = require("@sendgrid/mail");
 
 export default function Contact() {
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  //   Form validation state
+  const [errors, setErrors] = useState({});
+
+  //   Setting button text on form submission
+  const [buttonText, setButtonText] = useState("Send");
+
+  // Validation check method
+  const handleValidation = () => {
+    let tempErrors = {};
+    let isValid = true;
+
+    if (fullname.length <= 0) {
+      tempErrors["fullname"] = true;
+      isValid = false;
+    }
+    if (email.length <= 0) {
+      tempErrors["email"] = true;
+      isValid = false;
+    }
+    if (subject.length <= 0) {
+      tempErrors["subject"] = true;
+      isValid = false;
+    }
+    if (message.length <= 0) {
+      tempErrors["message"] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    console.log("errors", errors);
+    return isValid;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let isValidForm = handleValidation();
+    setButtonText("Sending..");
+    if (isValidForm) {
+      const body = {
+        body: JSON.stringify({
+          email: email,
+          fullname: fullname,
+          subject: subject,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      };
+      const res = await fetch("/api/sendMail", body)
+        .then(console.log("Email diterima"))
+        .then(
+          async () =>
+            await fetch("/api/replySender", body)
+              .then(console.log("Email dibalas"))
+              .catch((e) => console.log("error: ", e))
+        )
+        .catch((e) => console.log("error: ", e));
+
+      setButtonText("Send");
+    }
+    console.log(fullname, email, subject, message);
+  };
+
   return (
     <Layout title="Contact - Andhika Pramana Putra">
       <Head>
@@ -19,7 +91,10 @@ export default function Contact() {
             as possible
           </p>
         </div>
-        <form className="rounded-lg shadow-2xl flex flex-col px-8 py-8 bg-white dark:bg-inherit mb-8">
+        <form
+          onSubmit={handleSubmit}
+          className="rounded-lg shadow-2xl flex flex-col px-8 py-8 bg-white dark:bg-inherit mb-8"
+        >
           <h1 className="text-2xl font-bold ">Send a message</h1>
 
           <label
@@ -32,6 +107,10 @@ export default function Contact() {
             type="text"
             name="fullname"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 focus:border-b-0 ring-cyan-400 font-light text-gray-500 dark:text-inherit"
+            value={fullname}
+            onChange={(e) => {
+              setFullname(e.target.value);
+            }}
           />
 
           <label
@@ -44,6 +123,10 @@ export default function Contact() {
             type="email"
             name="email"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 focus:border-b-0  ring-cyan-400 font-light text-gray-500 dark:text-inherit"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
 
           <label
@@ -56,6 +139,10 @@ export default function Contact() {
             type="text"
             name="subject"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 focus:border-b-0  ring-cyan-400 font-light text-gray-500 dark:text-inherit"
+            value={subject}
+            onChange={(e) => {
+              setSubject(e.target.value);
+            }}
           />
 
           <label
@@ -67,10 +154,14 @@ export default function Contact() {
           <textarea
             name="message"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 focus:border-b-0  ring-cyan-400 font-light text-gray-500 dark:text-inherit"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
           ></textarea>
           <div className="flex flex-row items-center justify-start">
             <button className="px-10 mt-8 py-2 bg-slate-700 dark:bg-blue-700 text-gray-50 font-light rounded-2xl text-lg flex flex-row items-center hover:opacity-70">
-              Send
+              {buttonText}
               <svg
                 width="24"
                 height="24"
