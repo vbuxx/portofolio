@@ -9,7 +9,7 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
   const router = useRouter();
   const meta = {
     title: "Andhika Pramana Putra - Web Developer",
-    description: `Jombang, Indonesia | Software Engineer | Web Development | Front-End | Back-End | github.com/vbuxx | LinkedIn/andhikapramana | Bachelor of Enginnering | Electrical Engineering | Universitas Brawijaya`,
+    description: `Andhika Pramana Putra | Tech Enthusiast | Software Engineer | Web Development | Front-End | Back-End | github.com/vbuxx | linkedin.com/in/andhikapramana | Bachelor of Enginnering | Electrical Engineering | Universitas Brawijaya`,
     image: "/andhikapramanaputra.png",
     type: "website",
     ...customMeta,
