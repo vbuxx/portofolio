@@ -97,7 +97,7 @@ export default function Contact() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="rounded-lg shadow-2xl flex flex-col px-8 py-8 bg-white dark:bg-inherit mb-8"
+          className="rounded-lg shadow-2xl flex flex-col px-8 py-8 bg-inherit dark:bg-inherit mb-8"
         >
           <h1 className="text-2xl font-bold ">Send a message</h1>
 

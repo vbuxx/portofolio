@@ -10,7 +10,7 @@ const Dropdown = ({ links }) => {
       <div className="group inline-block relative">
         <div className="bg-gradient-to-r from-indigo-700 p-1 rounded-xl to-pink-400">
           <button className="font-semibold bg-white dark:bg-slate-800 py-2 px-4 rounded-lg drop shadow-xl inline-flex items-center">
-            {/* <span className="mr-1">{onPage[0].page}</span> */}
+            <span className="mr-1">{onPage[0].page}</span>
             <svg
               className="fill-current h-4 w-4"
               xmlns="http://www.w3.org/2000/svg"
