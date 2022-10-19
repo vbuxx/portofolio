@@ -1,7 +1,14 @@
+import React, { useEffect } from "react";
 import Layout from "../components/layouts/Layout";
 import Head from "next/head";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Layout
       title="Andhika Pramana Putra - Personal Website"
@@ -12,7 +19,13 @@ export default function Home() {
       </Head>
       <div className="flex h-full">
         <div className="flex flex-col pb-20 my-auto">
-          <div className="flex flex-col md:flex-row ">
+          <div
+            className="flex flex-col md:flex-row"
+            data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in"
+          >
             <div className="md:w-1/2 lg:mt-10 lg:leading-10">
               <p className="font-medium text-xl text-center md:text-start lg:text-2xl w-full leading-loose">
                 Hola👋 I&apos;m Andhika <br />
@@ -21,7 +34,8 @@ export default function Home() {
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-pink-400">
                     a Web Developer
                   </span>{" "}
-                  based in <span className="">Indonesia </span>
+                  based in{" "}
+                  <span className="">Indonesia </span>
                 </span>
               </p>
             </div>
@@ -33,9 +47,17 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex justify-center md:justify-start w-auto md:w-full lg:-mt-16">
+          <div
+            className="flex justify-center md:justify-start w-auto md:w-full lg:-mt-16"
+            data-aos="fade-left"
+            data-aos-delay="150"
+            data-aos-duration="500"
+            data-aos-easing="ease-in"
+          >
             <button className="bg-slate-700 text-white px-4 rounded-2xl py-2 shadow-lg transition-all delay-200 ease-in-out duration-500 hover:shadow-2xl hover:opacity-50">
-              <a href="https://www.showwcase.com/andhikapramana">My Resume ↗</a>
+              <a href="https://www.showwcase.com/andhikapramana">
+                My Resume ↗
+              </a>
             </button>
           </div>
         </div>

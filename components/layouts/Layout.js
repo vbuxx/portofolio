@@ -5,7 +5,11 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Container from "../Container";
 
-function Layout({ children, heightScreen = "", ...customMeta }) {
+function Layout({
+  children,
+  heightScreen = "",
+  ...customMeta
+}) {
   const router = useRouter();
   const meta = {
     title: "Andhika Pramana Putra - Web Developer",
@@ -23,7 +27,10 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
           name="google-site-verification"
           content="GPht8NK2bfNlSiWaQwNg-_feRA_eSzUbA9pHrRmUpiE"
         />
-        <meta content={meta.description} name="description" />
+        <meta
+          content={meta.description}
+          name="description"
+        />
         <meta
           property="og:url"
           content={`https://andhikapramana.my.id/${router.asPath}`}
@@ -33,13 +40,23 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
           href={`https://andhikapramana.my.id/${router.asPath}`}
         />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Andhika Pramana" />
-        <meta property="og:description" content={meta.description} />
+        <meta
+          property="og:site_name"
+          content="Andhika Pramana"
+        />
+        <meta
+          property="og:description"
+          content={meta.description}
+        />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
       </Head>
       <Container>
-        <div className={`flex flex-col min-h-screen ` + heightScreen}>
+        <div
+          className={
+            `flex flex-col min-h-screen ` + heightScreen
+          }
+        >
           <Navbar />
           {children}
           <Footer />

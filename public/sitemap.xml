@@ -5,26 +5,26 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>http://andhikapramana.my.id/about</loc>
-    <lastmod>2022-09-01T01:12:42.119Z</lastmod>
+    <loc>undefined/about</loc>
+    <lastmod>2022-10-19T00:26:50.341Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://andhikapramana.my.id/contact</loc>
-    <lastmod>2022-09-01T01:12:42.120Z</lastmod>
+    <loc>undefined/contact</loc>
+    <lastmod>2022-10-19T00:26:50.341Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://andhikapramana.my.id</loc>
-    <lastmod>2022-09-01T01:12:42.120Z</lastmod>
+    <loc>undefined</loc>
+    <lastmod>2022-10-19T00:26:50.341Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://andhikapramana.my.id/projects</loc>
-    <lastmod>2022-09-01T01:12:42.120Z</lastmod>
+    <loc>undefined/projects</loc>
+    <lastmod>2022-10-19T00:26:50.341Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

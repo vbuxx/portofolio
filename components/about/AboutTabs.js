@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import tabsData from "../../datas/tabsData";
 import TechStack from "./TechStack";
 
@@ -7,11 +7,18 @@ import EduTab from "./EduTab";
 import ExpTab from "./ExpTab";
 import CredentTab from "./CredentTab";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const AboutTabs = () => {
   const [showContent, setShowContent] = useState({
     tab: "about",
     content: tabsData[0].content,
   });
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const tabList = tabsData.map((data, id) => (
     <button
@@ -33,7 +40,13 @@ const AboutTabs = () => {
     </button>
   ));
   return (
-    <div className="pt-6">
+    <div
+      className="pt-6"
+      data-aos="fade-up"
+      data-aos-delay="600"
+      data-aos-duration="500"
+      data-aos-easing="ease-in"
+    >
       <div className="sticky top-0 bg-white dark:bg-inherit max-h-16 z-50">
         <div className="flex space-x-2 md:space-x-6 border-b font-medium border-gray-400 text-gray-500 dark:text-inherit">
           {tabList}
