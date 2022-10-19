@@ -22,7 +22,7 @@ export default function Home() {
           <div
             className="flex flex-col md:flex-row"
             data-aos="fade-right"
-            data-aos-delay="50"
+            data-aos-delay="100"
             data-aos-duration="500"
             data-aos-easing="ease-in"
           >
@@ -50,7 +50,7 @@ export default function Home() {
           <div
             className="flex justify-center md:justify-start w-auto md:w-full lg:-mt-16"
             data-aos="fade-left"
-            data-aos-delay="150"
+            data-aos-delay="300"
             data-aos-duration="500"
             data-aos-easing="ease-in"
           >
