@@ -10,18 +10,17 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta
-            name="google-site-verification"
-            content="gO2UedgoT25s2fLlaofsgPAE3r6jq_nHb83d16nwvLY"
-          />
+          <meta name="google-site-verification" content="pRIFpS4jHzp1SdOgd8MF7NhJaxKy9IljcJyNMj2dteI" />
         <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDMRTQS18H"></script>
+         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDMRTQS18H"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
+          function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'GA_TRACKING_ID');
+          gtag('config', 'G-DDMRTQS18H');
         </script>
         </Head>
         <body className="text-slate-800 dark:text-slate-100 dark:bg-slate-900">
