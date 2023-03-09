@@ -27,7 +27,7 @@ function Layout({
           name="google-site-verification"
           content="GPht8NK2bfNlSiWaQwNg-_feRA_eSzUbA9pHrRmUpiE"
         />
-    <meta name="ahrefs-site-verification" content="fc1b50b953f3cfa6174706c5d1cae4692069489216b8d14dbf5e2115f12fd642">
+        <meta name="ahrefs-site-verification" content="fc1b50b953f3cfa6174706c5d1cae4692069489216b8d14dbf5e2115f12fd642"/>
         <meta
           content={meta.description}
           name="description"
