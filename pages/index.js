@@ -71,9 +71,9 @@ export default function Home() {
             </div> */}
             <div className="md:w-1/2 lg:mt-10 lg:leading-10">
               <p className="font-medium text-xl text-center md:text-start lg:text-2xl w-full leading-loose">
-                Hola👋 I'm Andhika <br />
+                Hola👋 I&apos;m Andhika <br />
                 <span className="font-bold text-5xl lg:text-6xl drop-shadow-xl">
-                  I'm{" "}
+                  I&apos;m{" "}
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-pink-400">
                     a Weekend Developer
                   </span>{" "}
