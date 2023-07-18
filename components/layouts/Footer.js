@@ -13,7 +13,7 @@ function Footer() {
   return (
     <div className="mt-auto ">
       <footer
-        className="flex flex-col-reverse md:flex-row items-center justify-between font-medium py-8 md:pt-12 md:pb-8 gap-4 
+        className="flex flex-col-reverse md:flex-row items-center justify-between font-medium pb-12 pt-8 md:pt-12 md:pb-8 gap-4 
         ">
         <h3 className="">© {currentYear} Made with ❤️ in Jombang</h3>
         <div className="flex items-center space-x-6">

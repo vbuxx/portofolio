@@ -1,13 +1,45 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/layouts/Layout";
 import Head from "next/head";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 export default function Home() {
+  const [windowWidth, setWindowWidth] = useState(0);
+
   useEffect(() => {
     AOS.init();
+
+    // Function to update the window width
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial window width
+    setWindowWidth(window.innerWidth);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  // Calculate the appropriate image width based on the window width
+  let imageWidth;
+  if (windowWidth >= 1024) {
+    // Desktop: 375px
+    imageWidth = 375;
+  } else if (windowWidth >= 768) {
+    // Medium screen: 230px
+    imageWidth = 250;
+  } else {
+    // Mobile: 190px
+    imageWidth = 190;
+  }
 
   return (
     <Layout
@@ -50,11 +82,18 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex md:w-1/2 my-auto justify-center md:justify-end">
-              <img
+            <div className="flex md:w-1/2 justify-center md:justify-end lg:m-0 my-4">
+              {/* <img
                 src="/andhikapramana.webp"
                 alt="Andhika Pramana - Profile"
                 className="rounded-xl drop-shadow-xl m-8 lg:m-0 lg:ml-auto w-1/2 md:w-2/3 lg:w-3/4 "
+              /> */}
+              <Image
+                src="/andhikapramana.webp"
+                alt="Andhika Pramana - Profile"
+                width={imageWidth}
+                height={imageWidth}
+                className="rounded-xl drop-shadow-xl m-8 lg:m-0 lg:ml-auto"
               />
             </div>
           </div>
