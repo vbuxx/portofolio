@@ -12,8 +12,7 @@ export default function Home() {
   return (
     <Layout
       title="Andhika Pramana Putra - Personal Website"
-      heightScreen="h-screen"
-    >
+      heightScreen="h-screen">
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -24,9 +23,8 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-delay="100"
             data-aos-duration="500"
-            data-aos-easing="ease-in"
-          >
-            <div className="md:w-1/2 lg:mt-10 lg:leading-10">
+            data-aos-easing="ease-in">
+            {/* <div className="md:w-1/2 lg:mt-10 lg:leading-10">
               <p className="font-medium text-xl text-center md:text-start lg:text-2xl w-full leading-loose">
                 Hola👋 I&apos;m Andhika <br />
                 <span className="font-bold text-5xl lg:text-6xl drop-shadow-xl">
@@ -38,7 +36,20 @@ export default function Home() {
                   <span className="">Indonesia </span>
                 </span>
               </p>
+            </div> */}
+            <div className="md:w-1/2 lg:mt-10 lg:leading-10">
+              <p className="font-medium text-xl text-center md:text-start lg:text-2xl w-full leading-loose">
+                Hola👋 I'm Andhika <br />
+                <span className="font-bold text-5xl lg:text-6xl drop-shadow-xl">
+                  I'm{" "}
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-pink-400">
+                    a Weekend Developer
+                  </span>{" "}
+                  based in <span className="">Indonesia </span>
+                </span>
+              </p>
             </div>
+
             <div className="flex md:w-1/2 my-auto justify-center md:justify-end">
               <img
                 src="/andhikapramana.webp"
@@ -52,12 +63,9 @@ export default function Home() {
             data-aos="fade-left"
             data-aos-delay="300"
             data-aos-duration="500"
-            data-aos-easing="ease-in"
-          >
+            data-aos-easing="ease-in">
             <button className="bg-slate-700 text-white px-4 rounded-2xl py-2 shadow-lg transition-all delay-200 ease-in-out duration-500 hover:shadow-2xl hover:opacity-50">
-              <a href="https://www.showwcase.com/andhikapramana">
-                My Resume ↗
-              </a>
+              <a href="https://www.showwcase.com/andhikapramana">My Resume ↗</a>
             </button>
           </div>
         </div>

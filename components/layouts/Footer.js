@@ -1,14 +1,21 @@
 import Link from "next/link";
 import Container from "../Container";
+import { useState, useEffect } from "react";
 
 function Footer() {
+  const [currentYear, setCurrentYear] = useState("");
+
+  useEffect(() => {
+    // Get the current year using the Date object
+    const year = new Date().getFullYear();
+    setCurrentYear(year.toString());
+  }, []);
   return (
     <div className="mt-auto ">
       <footer
-        className="flex flex-col-reverse md:flex-row items-center justify-between font-medium py-8 md:py-12 
-        "
-      >
-        <h3 className="my-4">© 2022 Andhika Pramana</h3>
+        className="flex flex-col-reverse md:flex-row items-center justify-between font-medium py-8 md:pt-12 md:pb-8 gap-4 
+        ">
+        <h3 className="">© {currentYear} Made with ❤️ in Jombang</h3>
         <div className="flex items-center space-x-6">
           <a href="https://github.com/vbuxx">
             <img

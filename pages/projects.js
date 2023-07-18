@@ -35,8 +35,7 @@ export default function Projects({ repos }) {
                     return (
                       <span
                         key={topic}
-                        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2"
-                      >
+                        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">
                         {topic}
                       </span>
                     );
@@ -75,9 +74,18 @@ export async function getStaticProps() {
   const res = await fetch("https://api.github.com/users/vbuxx/repos");
   const repos = await res.json();
 
+  // Limit the data to the necessary information
+  const limitedRepos = repos.map((repo) => ({
+    name: repo.name,
+    description: repo.description,
+    topics: repo.topics,
+    homepage: repo.homepage,
+    pushed_at: repo.pushed_at,
+  }));
+
   return {
     props: {
-      repos,
+      repos: limitedRepos,
     },
   };
 }
