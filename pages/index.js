@@ -90,7 +90,7 @@ export default function Home() {
               /> */}
               <Image
                 src="/andhikapramana.webp"
-                alt="Andhika Pramana - Profile"
+                alt="Andhika Pramana - Foto Profil"
                 width={imageWidth}
                 height={imageWidth}
                 className="rounded-xl drop-shadow-xl m-8 lg:m-0 lg:ml-auto"
