@@ -6,11 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@sentry/nextjs": "^7.59.2",
     "aos": "^3.0.0-beta.6",
     "next": "12.2.4",
+    "next-sitemap": "^4.1.8",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
