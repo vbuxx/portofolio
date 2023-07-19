@@ -41,10 +41,15 @@ export default function Home() {
     imageWidth = 190;
   }
 
+  const customMeta = {
+    description:
+      "Hola! 👋 I'm Andhika, a Weekend Developer based in Indonesia.",
+    title: "Andhika Pramana - Personal Website",
+    // Add any other custom properties you want to override or add
+  };
+
   return (
-    <Layout
-      title="Andhika Pramana Putra - Personal Website"
-      heightScreen="h-screen">
+    <Layout heightScreen="h-screen" customMeta={customMeta}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
