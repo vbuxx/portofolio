@@ -1,6 +1,8 @@
 # *
 User-agent: *
 Allow: /
+Allow: /sitemap.xml
+Allow: /sitemap-0.xml
 
 # Host
 Host: https://me.andhikapramana.my.id
