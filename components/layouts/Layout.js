@@ -67,9 +67,6 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
           content={meta.customMeta?.title ? meta.customMeta.title : meta.title}
         />
         <meta property="og:image" content={meta.image} />
-      </Head>
-
-      <Container>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G_GHXJCZHZCB" />
         <Script id="google-analytics">
           {`
@@ -80,6 +77,9 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
           gtag('config', 'G_GHXJCZHZCB');
         `}
         </Script>
+      </Head>
+
+      <Container>
         <div className={`flex flex-col min-h-screen ` + heightScreen}>
           <Navbar />
           {children}
