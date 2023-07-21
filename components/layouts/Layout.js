@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Script from "next/script";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Head from "next/head";
