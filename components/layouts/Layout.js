@@ -40,7 +40,7 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
           name="ahrefs-site-verification"
           content="fc1b50b953f3cfa6174706c5d1cae4692069489216b8d14dbf5e2115f12fd642"
         />
-        
+
         <meta
           content={
             meta.customMeta?.description
@@ -66,17 +66,17 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
           content={meta.customMeta?.title ? meta.customMeta.title : meta.title}
         />
         <meta property="og:image" content={meta.image} />
-        
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GHXJCZHZCB"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-GHXJCZHZCB');
-        </script>
-
       </Head>
+
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-GHXJCZHZCB"></script>
+      <script>
+        window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config',
+        'G-GHXJCZHZCB');
+      </script>
+
       <Container>
         <div className={`flex flex-col min-h-screen ` + heightScreen}>
           <Navbar />
