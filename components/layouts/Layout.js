@@ -68,16 +68,17 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
         <meta property="og:image" content={meta.image} />
       </Head>
 
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-GHXJCZHZCB"></script>
-      <script>
-        window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config',
-        'G-GHXJCZHZCB');
-      </script>
-
       <Container>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G_GHXJCZHZCB" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G_GHXJCZHZCB');
+        `}
+        </Script>
         <div className={`flex flex-col min-h-screen ` + heightScreen}>
           <Navbar />
           {children}
