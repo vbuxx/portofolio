@@ -42,6 +42,15 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
           content="3ee5a4d16278377850cd8627129f1e99b22cfb217fa39875b16054830311ac88"
         />
 
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GHXJCZHZCB"></script>
+        <script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-GHXJCZHZCB');
+        </script>
+
         <meta
           content={
             meta.customMeta?.description
