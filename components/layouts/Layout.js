@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Container from "../Container";
+import GoogleAnalytics from "../GoogleAnalytics";
 
 function Layout({ children, heightScreen = "", ...customMeta }) {
   const [baseUrl, setBaseUrl] = useState("");
@@ -42,15 +43,6 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
           content="3ee5a4d16278377850cd8627129f1e99b22cfb217fa39875b16054830311ac88"
         />
 
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-GHXJCZHZCB"></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-GHXJCZHZCB');
-        </script>
-
         <meta
           content={
             meta.customMeta?.description
@@ -77,7 +69,7 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
         />
         <meta property="og:image" content={meta.image} />
       </Head>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G_GHXJCZHZCB" />
+      {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G_GHXJCZHZCB" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -86,7 +78,7 @@ function Layout({ children, heightScreen = "", ...customMeta }) {
  
           gtag('config', 'G_GHXJCZHZCB');
         `}
-      </Script>
+      </Script> */}
 
       <Container>
         <div className={`flex flex-col min-h-screen ` + heightScreen}>
