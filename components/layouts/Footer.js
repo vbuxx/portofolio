@@ -15,7 +15,7 @@ function Footer() {
       <footer
         className="flex flex-col-reverse md:flex-row items-center justify-between font-medium pb-12 pt-8 md:pt-12 md:pb-8 gap-4 
         ">
-        <h3 className="">© {currentYear} Made with ❤️ in Jombang</h3>
+        <h3 className="">© {currentYear}</h3>
         <div className="flex items-center space-x-6">
           <a href="https://github.com/vbuxx">
             <img
